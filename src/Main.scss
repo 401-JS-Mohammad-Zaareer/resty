@@ -1,0 +1,57 @@
+@mixin dimension($width, $height) {
+    width: $width;
+    height: $height;
+    border-radius: 3px;
+    outline: none;
+    border: 1px;
+    margin-bottom: 20px;
+}
+
+main {
+    height: 70vh;
+    text-align: center;
+    background-color: #F4F4F4;
+    padding-top: 30px;
+    font-weight: 500;
+    color: #292c30;
+    input {
+        margin: 15px;
+        margin-right: 5px;
+        &:first-child{
+            @include dimension(400px, 40px);
+            margin-right: 10px;
+        }
+    }
+    
+    button {
+        background-color: #10aca6;
+        color: #3c444d;
+        font-weight: bold;
+        font-size: 15px;
+        &:hover {
+            cursor: pointer;
+            background-color: #0E918C;
+            color: #FFF8CD;
+        }
+        @include dimension(50px, 40px)
+    }
+
+    section {
+        margin: 20px auto;
+        border-radius: 3px;
+        background-color: #e0e0dc;
+        width: 40%;
+        height: 50%;
+        span {
+            float: left;
+            margin: 10px;
+            padding: 5px 12px;
+            &:first-child {
+                display: inline-block;
+                background-color: #0E918C;
+                border-radius: 3px;
+                color:#FFF8CD;
+            }
+        }
+    }
+}
