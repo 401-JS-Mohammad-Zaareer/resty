@@ -2,6 +2,9 @@
 
 API testing tool that can be run in any browser, allowing a user to easily interact with APIs in a familiar interface.
 
+## UML
+![UML](assets/UML.png)
+
 ## Available Scripts
 
 In the project directory, you can run:
