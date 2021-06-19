@@ -1,9 +1,9 @@
 import React from "react";
-import './Main.scss';
-class Main extends React.Component {
+import './Form.scss';
+
+class Form extends React.Component {
     constructor(props) {
         super(props);
-        this.textInput = React.createRef();
         this.state = {
             url: '',
             method: ''
@@ -32,12 +32,20 @@ class Main extends React.Component {
         );
     }
     
-    handleSubmit = e => {
+    handleSubmit = async e => {
         e.preventDefault();
         const url = e.target.url.value;
         const method = e.target.method.value
         this.setState({url, method});
+ 
+        let raw = await fetch(url);
+        let data  = await raw.json();
+      
+        const count = data.count;
+        const results = data.results;
+
+        this.props.handler(results, count);
     }
 }
 
-export default Main;
+export default Form;
