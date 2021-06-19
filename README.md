@@ -1,6 +1,6 @@
 # Resty API Testing Application
 
-Deployment on codesandbox: [click here](https://codesandbox.io/s/crazy-satoshi-q9c15?file=/README.md)
+Deployment on codesandbox: [click here](https://codesandbox.io/s/practical-euclid-q9jzq)
 
 ## UML
 
